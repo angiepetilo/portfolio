@@ -1259,6 +1259,17 @@ section {
 
 .contact-icon {
     font-size: 1.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.contact-logo {
+    width: 32px;
+    height: 32px;
+    object-fit: contain;
+    border-radius: 50%;
+    mix-blend-mode: multiply;
 }
 
 .contact-info-text {
@@ -1356,6 +1367,12 @@ section {
 
 .social-link:hover {
     transform: translateY(-3px);
+}
+
+.footer-logo {
+    width: 32px;
+    height: 32px;
+    object-fit: contain;
 }
 
 /* Back to Top Button */
