@@ -1,0 +1,709 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Angie K. Petilo - Full Stack Developer Portfolio">
+    <title>MY PORTFOLIO | Full Stack Developer</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Loading Screen -->
+    <div class="loading-screen" id="loadingScreen">
+        <div class="loading-content">
+            <div class="loading-logo">zxsynie.</div>
+            <div class="loading-bar">
+                <div class="loading-progress"></div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Particle Background -->
+    <canvas class="particle-canvas" id="particleCanvas"></canvas>
+
+    <!-- Custom Cursor -->
+    <div class="custom-cursor" id="customCursor"></div>
+
+    <!-- Navigation -->
+    <nav class="navbar" id="navbar">
+        <div class="nav-container">
+            <a href="#home" class="nav-logo">zxsynie.</a>
+            <ul class="nav-menu" id="navMenu">
+                <li class="nav-item"><a href="#home" class="nav-link">Home</a></li>
+                <li class="nav-item"><a href="#about" class="nav-link">About</a></li>
+                <li class="nav-item"><a href="#skills" class="nav-link">Skills</a></li>
+                <li class="nav-item"><a href="#projects" class="nav-link">Projects</a></li>
+                <li class="nav-item"><a href="#certificates" class="nav-link">Certificates</a></li>
+                <li class="nav-item"><a href="#contact" class="nav-link">Contact</a></li>
+                <li class="nav-item">
+                    <button class="theme-toggle" id="themeToggle">
+                        <span class="theme-icon">🌙</span>
+                    </button>
+                </li>
+            </ul>
+            <button class="hamburger" id="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero" id="home">
+        <div class="hero-container">
+            <div class="hero-content">
+                <div class="hero-greeting">
+                    <span class="greeting-text">Hello, I'm</span>
+                    <h1 class="hero-name">Angie</h1>
+                </div>
+                <h2 class="hero-title">Full Stack Developer</h2>
+                <p class="hero-subtitle">I create modern and responsive web applications focused on clean UI and user experience.</p>
+                <div class="hero-buttons">
+                    <a href="#" class="btn btn-primary">View Resume</a>
+                    <a href="#contact" class="btn btn-secondary">Contact Me</a>
+                </div>
+                <div class="hero-tech-stack">
+                    <div class="tech-icon" data-tooltip="HTML5">HTML</div>
+                    <div class="tech-icon" data-tooltip="CSS3">CSS</div>
+                    <div class="tech-icon" data-tooltip="JavaScript">JS</div>
+                    <div class="tech-icon" data-tooltip="React">React</div>
+                    <div class="tech-icon" data-tooltip="Next.js">Next</div>
+                </div>
+            </div>
+            <div class="hero-image">
+                <div class="profile-wrapper">
+                    <div class="profile-glow"></div>
+                    <div class="profile-placeholder">
+                        <img src="assets/images/pfp.png" alt="Angie K. Petilo" class="profile-avatar-img">
+                    </div>
+                </div>
+                <div class="experience-badge">
+                    <div class="badge-icon">🎓</div>
+                    <div class="badge-text">
+                        <span class="badge-label">Student Developer</span>
+                        <span class="badge-value">FSUU • Class of 2027</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="scroll-indicator">
+            <div class="scroll-arrow"></div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section class="about" id="about">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">About Me</h2>
+                <div class="section-line"></div>
+            </div>
+            <div class="about-content">
+                <div class="about-text">
+                    <p>Angie K. Petilo is a BSIT student at Father Saturnino Urios University, graduating in 2027. She focuses on building modern, responsive, and user-friendly web applications with clean interfaces and practical functionality. Her work combines frontend design, backend development, and UI/UX principles to create polished digital experiences.</p>
+                    <p>With a passion for creating seamless user experiences, she specializes in building full-stack applications that are both visually appealing and highly functional. Her approach emphasizes clean code, modern design patterns, and attention to detail.</p>
+                </div>
+                <div class="about-stats">
+                    <div class="stat-card">
+                        <div class="stat-number">4+</div>
+                        <div class="stat-label">Years Learning</div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-number">10+</div>
+                        <div class="stat-label">Projects Completed</div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-number">5+</div>
+                        <div class="stat-label">Technologies</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section class="skills" id="skills">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Skills</h2>
+                <div class="section-line"></div>
+            </div>
+            <div class="skills-grid">
+                <div class="skill-card">
+                    <div class="skill-header">
+                        <div class="skill-icon">🌐</div>
+                        <span class="skill-name">HTML</span>
+                    </div>
+                    <div class="skill-progress">
+                        <div class="progress-bar">
+                            <div class="progress-fill" style="width: 95%"></div>
+                        </div>
+                        <span class="skill-percentage">95%</span>
+                    </div>
+                </div>
+                <div class="skill-card">
+                    <div class="skill-header">
+                        <div class="skill-icon">🎨</div>
+                        <span class="skill-name">CSS</span>
+                    </div>
+                    <div class="skill-progress">
+                        <div class="progress-bar">
+                            <div class="progress-fill" style="width: 90%"></div>
+                        </div>
+                        <span class="skill-percentage">90%</span>
+                    </div>
+                </div>
+                <div class="skill-card">
+                    <div class="skill-header">
+                        <div class="skill-icon">⚡</div>
+                        <span class="skill-name">JavaScript</span>
+                    </div>
+                    <div class="skill-progress">
+                        <div class="progress-bar">
+                            <div class="progress-fill" style="width: 85%"></div>
+                        </div>
+                        <span class="skill-percentage">85%</span>
+                    </div>
+                </div>
+                <div class="skill-card">
+                    <div class="skill-header">
+                        <div class="skill-icon">📘</div>
+                        <span class="skill-name">TypeScript</span>
+                    </div>
+                    <div class="skill-progress">
+                        <div class="progress-bar">
+                            <div class="progress-fill" style="width: 75%"></div>
+                        </div>
+                        <span class="skill-percentage">75%</span>
+                    </div>
+                </div>
+                <div class="skill-card">
+                    <div class="skill-header">
+                        <div class="skill-icon">⚛️</div>
+                        <span class="skill-name">React</span>
+                    </div>
+                    <div class="skill-progress">
+                        <div class="progress-bar">
+                            <div class="progress-fill" style="width: 80%"></div>
+                        </div>
+                        <span class="skill-percentage">80%</span>
+                    </div>
+                </div>
+                <div class="skill-card">
+                    <div class="skill-header">
+                        <div class="skill-icon">▲</div>
+                        <span class="skill-name">Next.js</span>
+                    </div>
+                    <div class="skill-progress">
+                        <div class="progress-bar">
+                            <div class="progress-fill" style="width: 75%"></div>
+                        </div>
+                        <span class="skill-percentage">75%</span>
+                    </div>
+                </div>
+                <div class="skill-card">
+                    <div class="skill-header">
+                        <div class="skill-icon">🐍</div>
+                        <span class="skill-name">Django</span>
+                    </div>
+                    <div class="skill-progress">
+                        <div class="progress-bar">
+                            <div class="progress-fill" style="width: 70%"></div>
+                        </div>
+                        <span class="skill-percentage">70%</span>
+                    </div>
+                </div>
+                <div class="skill-card">
+                    <div class="skill-header">
+                        <div class="skill-icon">💨</div>
+                        <span class="skill-name">Tailwind CSS</span>
+                    </div>
+                    <div class="skill-progress">
+                        <div class="progress-bar">
+                            <div class="progress-fill" style="width: 85%"></div>
+                        </div>
+                        <span class="skill-percentage">85%</span>
+                    </div>
+                </div>
+                <div class="skill-card">
+                    <div class="skill-header">
+                        <div class="skill-icon">✨</div>
+                        <span class="skill-name">UI/UX Design</span>
+                    </div>
+                    <div class="skill-progress">
+                        <div class="progress-bar">
+                            <div class="progress-fill" style="width: 80%"></div>
+                        </div>
+                        <span class="skill-percentage">80%</span>
+                    </div>
+                </div>
+                <div class="skill-card">
+                    <div class="skill-header">
+                        <div class="skill-icon">🎯</div>
+                        <span class="skill-name">Figma</span>
+                    </div>
+                    <div class="skill-progress">
+                        <div class="progress-bar">
+                            <div class="progress-fill" style="width: 75%"></div>
+                        </div>
+                        <span class="skill-percentage">75%</span>
+                    </div>
+                </div>
+                <div class="skill-card">
+                    <div class="skill-header">
+                        <div class="skill-icon">🗄️</div>
+                        <span class="skill-name">Supabase</span>
+                    </div>
+                    <div class="skill-progress">
+                        <div class="progress-bar">
+                            <div class="progress-fill" style="width: 70%"></div>
+                        </div>
+                        <span class="skill-percentage">70%</span>
+                    </div>
+                </div>
+                <div class="skill-card">
+                    <div class="skill-header">
+                        <div class="skill-icon">🐘</div>
+                        <span class="skill-name">PHP</span>
+                    </div>
+                    <div class="skill-progress">
+                        <div class="progress-bar">
+                            <div class="progress-fill" style="width: 80%"></div>
+                        </div>
+                        <span class="skill-percentage">80%</span>
+                    </div>
+                </div>
+                <div class="skill-card">
+                    <div class="skill-header">
+                        <div class="skill-icon">🐍</div>
+                        <span class="skill-name">Python</span>
+                    </div>
+                    <div class="skill-progress">
+                        <div class="progress-bar">
+                            <div class="progress-fill" style="width: 75%"></div>
+                        </div>
+                        <span class="skill-percentage">75%</span>
+                    </div>
+                </div>
+                <div class="skill-card">
+                    <div class="skill-header">
+                        <div class="skill-icon">🔴</div>
+                        <span class="skill-name">Laravel</span>
+                    </div>
+                    <div class="skill-progress">
+                        <div class="progress-bar">
+                            <div class="progress-fill" style="width: 75%"></div>
+                        </div>
+                        <span class="skill-percentage">75%</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section class="services">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Services</h2>
+                <div class="section-line"></div>
+            </div>
+            <div class="services-grid">
+                <div class="service-card">
+                    <div class="service-icon">🎨</div>
+                    <h3 class="service-title">Frontend Development</h3>
+                    <p class="service-description">Building responsive and interactive user interfaces with modern frameworks and best practices.</p>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">🔧</div>
+                    <h3 class="service-title">Full Stack Development</h3>
+                    <p class="service-description">Creating complete web applications from frontend to backend with database integration.</p>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">✨</div>
+                    <h3 class="service-title">UI/UX Design</h3>
+                    <p class="service-description">Designing intuitive and visually appealing user experiences that engage and convert.</p>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">📱</div>
+                    <h3 class="service-title">Responsive Web Design</h3>
+                    <p class="service-description">Ensuring your website looks and functions perfectly across all devices and screen sizes.</p>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">📊</div>
+                    <h3 class="service-title">Modern Dashboard Systems</h3>
+                    <p class="service-description">Building powerful dashboard applications with data visualization and management tools.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Experience Section -->
+    <section class="experience">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Experience</h2>
+                <div class="section-line"></div>
+            </div>
+            <div class="experience-timeline">
+                <div class="experience-item">
+                    <div class="experience-year">2024</div>
+                    <div class="experience-content">
+                        <h3 class="experience-title">Learning Programming Fundamentals</h3>
+                        <p class="experience-description">Started the journey in software development by learning the core foundations of programming, including logic building, problem-solving, HTML, CSS, JavaScript, and database fundamentals. Developed beginner projects to strengthen understanding of frontend and backend concepts.</p>
+                    </div>
+                </div>
+                <div class="experience-item">
+                    <div class="experience-year">2025</div>
+                    <div class="experience-content">
+                        <h3 class="experience-title">Collaboration & Full Stack Learning</h3>
+                        <p class="experience-description">Expanded technical skills by learning GitHub for version control, collaborative development workflows, and backend development using Django. Began working on team-based academic and personal projects while improving UI/UX understanding and responsive web design practices.</p>
+                    </div>
+                </div>
+                <div class="experience-item">
+                    <div class="experience-year">2026</div>
+                    <div class="experience-content">
+                        <h3 class="experience-title">Building Functional Applications</h3>
+                        <p class="experience-description">Focused on creating multiple fully functional web and mobile applications using modern technologies. Developed systems with authentication, dashboards, databases, responsive interfaces, and real-time functionality while gaining hands-on experience in full stack development and modern deployment workflows.</p>
+                    </div>
+                </div>
+                <div class="experience-item">
+                    <div class="experience-year">2027</div>
+                    <div class="experience-content">
+                        <h3 class="experience-title">Adapting to Advanced Technologies with AI</h3>
+                        <p class="experience-description">Continuously improving as a developer by exploring advanced technologies, scalable systems, modern frameworks, and AI-assisted development workflows. Utilizing AI tools to accelerate learning, improve productivity, and build smarter, more efficient digital solutions while preparing for professional industry opportunities.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section class="projects" id="projects">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Projects</h2>
+                <div class="section-line"></div>
+            </div>
+            <div class="project-filters">
+                <button class="filter-btn active" data-filter="all">All</button>
+                <button class="filter-btn" data-filter="web">Web Apps</button>
+                <button class="filter-btn" data-filter="design">Design</button>
+            </div>
+            <div class="projects-grid">
+                <div class="project-card" data-category="web">
+                    <div class="project-image">
+                        <div class="project-placeholder">
+                            <div class="placeholder-icon">📚</div>
+                            <span class="placeholder-text">StudySync</span>
+                        </div>
+                    </div>
+                    <div class="project-content">
+                        <h3 class="project-title">StudySync</h3>
+                        <p class="project-description">An all-in-one productivity and collaboration platform for students that combines task management, scheduling, notes, and academic tools into a modern web application.</p>
+                        <div class="project-tech">
+                            <span class="tech-tag">Next.js 14</span>
+                            <span class="tech-tag">React</span>
+                            <span class="tech-tag">TypeScript</span>
+                            <span class="tech-tag">Tailwind CSS</span>
+                            <span class="tech-tag">Supabase</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="https://study-snc.vercel.app" target="_blank" class="project-link">
+                                <span>Live Demo</span>
+                                <span>→</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="project-card" data-category="web">
+                    <div class="project-image">
+                        <div class="project-placeholder">
+                            <div class="placeholder-icon">🏢</div>
+                            <span class="placeholder-text">HRMS Web</span>
+                        </div>
+                    </div>
+                    <div class="project-content">
+                        <h3 class="project-title">HRMS Web</h3>
+                        <p class="project-description">A comprehensive Human Resource Management System for managing employee data, attendance, payroll, and organizational workflows with a modern interface.</p>
+                        <div class="project-tech">
+                            <span class="tech-tag">PHP</span>
+                            <span class="tech-tag">Laravel</span>
+                            <span class="tech-tag">MySQL</span>
+                            <span class="tech-tag">JavaScript</span>
+                            <span class="tech-tag">Bootstrap</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="https://hrmsweb.app" target="_blank" class="project-link">
+                                <span>Live Demo</span>
+                                <span>→</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="project-card" data-category="web">
+                    <div class="project-image">
+                        <div class="project-placeholder">
+                            <div class="placeholder-icon">🎓</div>
+                            <span class="placeholder-text">AcadTract</span>
+                        </div>
+                    </div>
+                    <div class="project-content">
+                        <h3 class="project-title">AcadTract</h3>
+                        <p class="project-description">A modern school registration and management system that streamlines student enrollment, class scheduling, and academic record tracking for educational institutions.</p>
+                        <div class="project-tech">
+                            <span class="tech-tag">Next.js</span>
+                            <span class="tech-tag">React</span>
+                            <span class="tech-tag">TypeScript</span>
+                            <span class="tech-tag">Tailwind CSS</span>
+                            <span class="tech-tag">PostgreSQL</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="https://acadtract.vercel.app" target="_blank" class="project-link">
+                                <span>Live Demo</span>
+                                <span>→</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- Tech Stack Section -->
+    <section class="tech-stack">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Tech Stack</h2>
+                <div class="section-line"></div>
+            </div>
+            <div class="tech-grid">
+                <div class="tech-item">
+                    <div class="tech-icon-wrapper">⚛️</div>
+                    <span class="tech-name">React</span>
+                </div>
+                <div class="tech-item">
+                    <div class="tech-icon-wrapper">▲</div>
+                    <span class="tech-name">Next.js</span>
+                </div>
+                <div class="tech-item">
+                    <div class="tech-icon-wrapper">📘</div>
+                    <span class="tech-name">TypeScript</span>
+                </div>
+                <div class="tech-item">
+                    <div class="tech-icon-wrapper">💨</div>
+                    <span class="tech-name">Tailwind CSS</span>
+                </div>
+                <div class="tech-item">
+                    <div class="tech-icon-wrapper">🗄️</div>
+                    <span class="tech-name">Supabase</span>
+                </div>
+                <div class="tech-item">
+                    <div class="tech-icon-wrapper">🐘</div>
+                    <span class="tech-name">PostgreSQL</span>
+                </div>
+                <div class="tech-item">
+                    <div class="tech-icon-wrapper">🐍</div>
+                    <span class="tech-name">Django</span>
+                </div>
+                <div class="tech-item">
+                    <div class="tech-icon-wrapper">🎨</div>
+                    <span class="tech-name">Figma</span>
+                </div>
+                <div class="tech-item">
+                    <div class="tech-icon-wrapper">🐘</div>
+                    <span class="tech-name">PHP</span>
+                </div>
+                <div class="tech-item">
+                    <div class="tech-icon-wrapper">🐍</div>
+                    <span class="tech-name">Python</span>
+                </div>
+                <div class="tech-item">
+                    <div class="tech-icon-wrapper">🔴</div>
+                    <span class="tech-name">Laravel</span>
+                </div>
+                <div class="tech-item">
+                    <div class="tech-icon-wrapper">🐬</div>
+                    <span class="tech-name">MySQL</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Certificates Section -->
+    <section class="certificates" id="certificates">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Certificates</h2>
+                <div class="section-line"></div>
+            </div>
+            <div class="certificates-grid">
+                <div class="certificate-card">
+                    <div class="certificate-icon">🏆</div>
+                    <h3 class="certificate-title">Web Development Certificate</h3>
+                    <p class="certificate-description">Comprehensive web development training covering HTML, CSS, and JavaScript.</p>
+                </div>
+                <div class="certificate-card">
+                    <div class="certificate-icon">🎨</div>
+                    <h3 class="certificate-title">UI/UX Design Certificate</h3>
+                    <p class="certificate-description">User interface and user experience design principles and best practices.</p>
+                </div>
+                <div class="certificate-card">
+                    <div class="certificate-icon">⚡</div>
+                    <h3 class="certificate-title">JavaScript Fundamentals</h3>
+                    <p class="certificate-description">Core JavaScript concepts, DOM manipulation, and asynchronous programming.</p>
+                </div>
+                <div class="certificate-card">
+                    <div class="certificate-icon">🗄️</div>
+                    <h3 class="certificate-title">Database Management</h3>
+                    <p class="certificate-description">Database design, SQL fundamentals, and data management systems.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="faq">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">FAQ</h2>
+                <div class="section-line"></div>
+            </div>
+            <div class="faq-container">
+                <div class="faq-item">
+                    <button class="faq-question">
+                        <span>What technologies do you work with?</span>
+                        <span class="faq-icon">+</span>
+                    </button>
+                    <div class="faq-answer">
+                        <p>I primarily work with React, Next.js, TypeScript, Tailwind CSS, and Supabase for full stack development. I also have experience with Django for backend development and Figma for UI/UX design.</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <button class="faq-question">
+                        <span>Are you available for freelance projects?</span>
+                        <span class="faq-icon">+</span>
+                    </button>
+                    <div class="faq-answer">
+                        <p>Yes, I'm available for freelance projects. Feel free to reach out through the contact form to discuss your project requirements and timeline.</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <button class="faq-question">
+                        <span>What is your typical project timeline?</span>
+                        <span class="faq-icon">+</span>
+                    </button>
+                    <div class="faq-answer">
+                        <p>Project timelines vary based on complexity and scope. A simple website might take 2-4 weeks, while more complex applications can take 6-12 weeks. I provide detailed estimates after discussing project requirements.</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <button class="faq-question">
+                        <span>Do you provide ongoing support after project completion?</span>
+                        <span class="faq-icon">+</span>
+                    </button>
+                    <div class="faq-answer">
+                        <p>Yes, I offer post-launch support packages to ensure your application continues to run smoothly. This includes bug fixes, minor updates, and technical assistance.</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <button class="faq-question">
+                        <span>How do you handle project communication?</span>
+                        <span class="faq-icon">+</span>
+                    </button>
+                    <div class="faq-answer">
+                        <p>I maintain regular communication throughout projects using email, video calls, and project management tools. You'll receive updates on progress and have opportunities to provide feedback at key milestones.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="contact" id="contact">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Contact</h2>
+                <div class="section-line"></div>
+            </div>
+            <div class="contact-content">
+                <div class="contact-info">
+                    <h3 class="contact-heading">Let's Connect</h3>
+                    <p class="contact-text">Feel free to reach out for collaborations, project inquiries, or just to say hello!</p>
+                    <div class="contact-details">
+                        <div class="contact-item">
+                            <div class="contact-icon">📧</div>
+                            <div class="contact-info-text">
+                                <span class="contact-label">Email</span>
+                                <a href="mailto:angie.petilo@urios.edu.ph" class="contact-value">angie.petilo@urios.edu.ph</a>
+                            </div>
+                        </div>
+                        <div class="contact-item">
+                            <div class="contact-icon">📘</div>
+                            <div class="contact-info-text">
+                                <span class="contact-label">Facebook</span>
+                                <a href="#" class="contact-value">Angie Petilo</a>
+                            </div>
+                        </div>
+                        <div class="contact-item">
+                            <div class="contact-icon">�</div>
+                            <div class="contact-info-text">
+                                <span class="contact-label">Instagram</span>
+                                <a href="#" class="contact-value">Angie Petilo</a>
+                            </div>
+                        </div>
+                        <div class="contact-item">
+                            <div class="contact-icon">🐱</div>
+                            <div class="contact-info-text">
+                                <span class="contact-label">GitHub</span>
+                                <a href="#" class="contact-value">zxsynie</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="contact-form-wrapper">
+                    <form class="contact-form" id="contactForm">
+                        <div class="form-group">
+                            <input type="text" class="form-input" placeholder="Your Name" required>
+                        </div>
+                        <div class="form-group">
+                            <input type="email" class="form-input" placeholder="Your Email" required>
+                        </div>
+                        <div class="form-group">
+                            <input type="text" class="form-input" placeholder="Subject" required>
+                        </div>
+                        <div class="form-group">
+                            <textarea class="form-textarea" placeholder="Your Message" rows="5" required></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-primary btn-submit">Send Message</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <p class="footer-text">Designed & Developed by Angie K. Petilo</p>
+                <div class="footer-social">
+                    <a href="#" class="social-link">📘</a>
+                    <a href="#" class="social-link">📸</a>
+                    <a href="#" class="social-link">💼</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Back to Top Button -->
+    <button class="back-to-top" id="backToTop">↑</button>
+
+    <script src="app.js"></script>
+</body>
+</html>
